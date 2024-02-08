@@ -1,0 +1,22 @@
+version: '3.1'
+services:
+    netflix_db:
+        image: postgres
+        restart: always
+        environment:
+            POSTGRES_PASSWORD: netflix
+            POSTGRES_USER: netflix
+            PGUSER: netflix
+            POSTGRES_DB: netflix
+        ports:
+            - "15432:5432"
+    pagila_db:
+        image: postgres
+        restart: always
+        environment:
+            POSTGRES_PASSWORD: pagila
+            POSTGRES_USER: pagila
+            PGUSER: pagila
+            POSTGRES_DB: pagila
+        ports:
+            - "25432:5432"
