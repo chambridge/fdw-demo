@@ -34,7 +34,7 @@ psql -d "postgres://pagila:pagila@localhost:25432/pagila" -f pagila.sql
 
 The Pagila database has actor content that we want to correlate with the Netfilx data, so we want to make it a accessible to the Netflix database.
 
-First we start with creating a rea-only user in the Pagila database:
+First we start with creating a read-only user in the Pagila database:
 ```
 psql -d "postgres://pagila:pagila@localhost:25432/pagila" -c "CREATE USER fdwUser WITH PASSWORD 'secret'"
 ```
